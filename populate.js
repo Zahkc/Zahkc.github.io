@@ -53,24 +53,24 @@ function flingStar(starPos) {
   switch(Math.floor(Math.random() *4)) {
     case 0:
       xStart = (Math.floor(Math.random() * yMax));
-      yStart = -50;
+      yStart = 0;
       xArc = xStart;
       yArc = xMax + 10;
       break;
     case 1:
-      xStart = -50;
+      xStart = 0;
       yStart = (Math.floor(Math.random() * xMax));
       xArc = yMax + 10;
       yArc = yStart;
       break;
     case 2:
       xStart = (Math.floor(Math.random() * yMax));
-      yStart = xMax + 50;
+      yStart = xMax;
       xArc = xStart;
       yArc = - 10;
       break;
     case 3:
-      xStart = yMax + 50;
+      xStart = yMax;
       yStart = (Math.floor(Math.random() * xMax));
       xArc = -10;
       yArc = yStart;
