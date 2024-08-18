@@ -17,10 +17,7 @@ body {
     font-family: 'SpaceRangerHalf';
     src: url('spacerangerhalf.ttf') format('truetype');
 }
-@font-face {
-    font-family: 'SpaceRangerLaser';
-    src: url('spacerangerlaser.ttf') format('truetype');
-}
+
 
 .bigStar {
   width: 0.5vh;
