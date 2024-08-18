@@ -65,12 +65,12 @@ function flingStar(starPos) {
       break;
     case 2:
       xStart = (Math.floor(Math.random() * yMax));
-      yStart = xMax;
+      yStart = (xMax-(yMax**0.0075));
       xArc = xStart;
       yArc = - 10;
       break;
     case 3:
-      xStart = yMax;
+      xStart = (yMax-(yMax*0.0075));
       yStart = (Math.floor(Math.random() * xMax));
       xArc = -10;
       yArc = yStart;
