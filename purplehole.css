@@ -7,7 +7,19 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
+}
 
+@font-face {
+    font-family: 'SpaceRanger';
+    src: url('spaceranger.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SpaceRangerHalf';
+    src: url('spacerangerhalf.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SpaceRangerLaser';
+    src: url('spacerangerlaser.ttf') format('truetype');
 }
 
 .bigStar {
@@ -144,10 +156,38 @@ body {
 
 .tText {
   color: white;
-  font-family: monospace;
+  font-family: SpaceRangerHalf;
   text-shadow: 0 0 1em #ffffff;
   font-size: 8vh;
   text-align: center;
+}
+
+
+.sinkingStar {
+  width: 0.75vh;
+  height: 0.75vh;
+  background:white;
+  clip-path: polygon(20% 40%, 40% 40%, 40% 20%, 60% 20%, 60% 39%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%);
+  position:relative;
+  z-index:90;
+}
+
+.spinring {
+    left: 50%;
+    position: fixed;
+    transform-style: preserve-3d;
+    animation: spinspinspin 8s linear infinite;
+    --deg: calc(360deg / var(--numchs));
+}
+
+.spinring .char {
+    position: fixed;
+    color: white;
+    font-size: 4vh;
+    font-family: SpaceRanger;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--char-index) * var(--deg))) translateZ(30vh) translateY(50vh);
 }
 
 @keyframes glimmer {
@@ -159,14 +199,6 @@ body {
   }
 }
 
-.sinkingStar {
-  width: 0.75vh;
-  height: 0.75vh;
-  background:white;
-  clip-path: polygon(20% 40%, 40% 40%, 40% 20%, 60% 20%, 60% 39%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%);
-  position:relative;
-  z-index:90;
-}
 
 @keyframes move {
   0% {
@@ -179,29 +211,11 @@ body {
   }
 }
 
-
-.spinring {
-    left: 50%;
-    position: fixed;
-    transform-style: preserve-3d;
-    animation: animate 8s linear infinite;
-    --deg: calc(360deg / var(--numchs));
-}
-
-@keyframes animate {
+@keyframes spinspinspin {
     0% {
         transform: perspective(100vh) rotateY(360deg);
     }
     100% {
         transform: perspective(100vh) rotateY(0deg) ;
     }
-}
-
-.spinring .char {
-    position: fixed;
-    color: white;
-    font-size: 2em;
-    transform-style: preserve-3d;
-    transform-origin: center;
-    transform: rotateY(calc(var(--char-index) * var(--deg))) translateZ(30vh) translateY(50vh);
 }
