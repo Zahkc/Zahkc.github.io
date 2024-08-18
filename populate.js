@@ -33,7 +33,7 @@ for ( let i = 0; i < text.length; i++ ) {
   spinring.innerHTML = spinring.innerHTML + '<div class="char" style="--char-index: ' + i + ';">' + text.charAt(i) + '</div>';
 }
 
-vaccume(10);
+vaccume(12);
 
 async function vaccume(fallingCount){
   for (let i = 0; i < fallingCount; i++) {
