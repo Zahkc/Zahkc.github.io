@@ -1,0 +1,97 @@
+.scene {
+  border: 1mm solid #CCC;
+  margin: auto;
+  perspective: 200mm;
+}
+
+.cassette {
+  width: 70mm;
+  height: 110mm;
+  top: 50%;
+  left: 50%;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: translateZ(-200mm) rotateY(  90deg) rotateX(90deg);
+  transition: transform 1s;
+}
+
+.cassette_art {
+position: relative;
+transform-style: preserve-3d;
+transition: transform 1s;
+}
+.cassette_case {
+position: relative;
+transform-style: preserve-3d;
+transition: transform 1s;
+}
+
+
+.cassette.show-front  { transform: translateZ(0mm) rotateY(   0deg); }
+.cassette.show-back   { transform: translateZ(0mm) rotateY(-180deg); }
+.cassette.show-right  { transform: translateZ(0mm) rotateY( -90deg); }
+.cassette.show-left   { transform: translateZ(0mm) rotateY(  90deg); }
+.cassette.show-top    { transform: translateZ(0mm) rotateX( -90deg); }
+.cassette.show-bottom { transform: translateZ(0mm) rotateX(  90deg); }
+
+.cassette.show-close  { transform: translateZ(0mm) rotateY(  90deg) rotateX(90deg);}
+.cassette.show-open   { transform: translateZ(0mm) rotateY(-180deg) rotateZ(-90deg);}
+.cassette.show-tracks { transform: translateZ(75mm) rotateY(-180deg) rotateZ(90deg);}
+.cassette_case.close  { transform: rotateY(0deg); transform-origin: 10% 50%; }
+.cassette_case.open   { transform: rotateY(160deg); transform-origin: 10% 50%; }
+
+
+.cassette_face {
+  position: absolute;
+}
+
+.cassette_face--front  {
+  width: 70mm;
+  height: 110mm;
+  transform: rotateY(  0deg) translateZ(10mm);
+}
+
+.cassette_face--back_art   {
+  width: 30mm;
+  height: 110mm;
+  transform: rotateY(  180deg) translateZ(10mm);
+
+}
+
+.cassette_face--back_case   {
+  width: 40mm;
+  height: 110mm;
+  transform: rotateY(  180deg) translateZ(10mm) translateX( -30mm);
+  background: repeating-linear-gradient(transparent ,transparent 1mm, #3d3e41 2mm, #3d3e41 2mm), repeating-linear-gradient(90deg, #333333 ,#333333 1mm, #3d3e41 2mm, #3d3e41 2mm);
+}
+
+.cassette_face--left   {
+  width: 20mm;
+  height: 110mm;
+  left: 25mm;
+  transform: rotateY(  270deg) translateZ(35mm);
+}
+
+.cassette_face--right  {
+  width: 20mm;
+  height: 110mm;
+  left: 25mm;
+  transform: rotateY(  90deg) translateZ(35mm);
+  background: repeating-linear-gradient(transparent ,transparent 1mm, #3d3e41 2mm, #3d3e41 2mm), repeating-linear-gradient(90deg, #333333 ,#333333 1mm, #3d3e41 2mm, #3d3e41 2mm);
+}
+
+.cassette_face--top    {
+  width: 70mm;
+  height: 20mm;
+  top: 45mm;
+  transform: rotateX(  90deg) translateZ(55mm);
+  background: repeating-linear-gradient(transparent ,transparent 1mm, #3d3e41 2mm, #3d3e41 2mm), repeating-linear-gradient(90deg, #333333 ,#333333 1mm, #3d3e41 2mm, #3d3e41 2mm);
+}
+
+.cassette_face--bottom {
+  width: 70mm;
+  height: 20mm;
+  top: 45mm;
+  transform: rotateX(  270deg) translateZ(55mm);
+  background: repeating-linear-gradient(transparent ,transparent 1mm, #3d3e41 2mm, #3d3e41 2mm), repeating-linear-gradient(90deg, #333333 ,#333333 1mm, #3d3e41 2mm, #3d3e41 2mm);
+}

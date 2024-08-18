@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="cassette.css">
+    <link rel="stylesheet" href="shelf.css">
+  </head>
+
+  <body>
+    <div class="scene">
+      <div class="cassette">
+
+        <div class="cassette_art">
+          <div class="cassette_face cassette_face--front" style="background: url('./front.png');
+          background-size: cover;"></div>
+          <div class="cassette_face cassette_face--back_art" style="background: url('./back.png');
+            background-size: cover;"></div>
+          <div class="cassette_face cassette_face--left" style="background: url('./left.png');
+            background-size: cover;"></div>
+        </div>
+        <div class="cassette_case">
+          <div class="cassette_face cassette_face--back_case"></div>
+          <div class="cassette_face cassette_face--right"></div>
+          <div class="cassette_face cassette_face--top"></div>
+          <div class="cassette_face cassette_face--bottom"></div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+    <!-- <div class="shelfscene">
+      <div class="shelf">
+        <div class="shelf-back">BACK</div>
+        <div class="shelf-front" style="width: 390mm; height: 250mm;">A</div>
+        <div class="shelf-front" style="width: 390mm; height: 250mm;">B</div>
+        <div class="shelf-front" style="width: 390mm; height: 250mm;">C</div>
+        <div class="shelf-front" style="width: 390mm; height: 250mm;">D</div>
+        <div class="shelf-top" style="transform: rotateX( 90deg) translateZ(100mm);">TOP</div>
+        <div class="shelf-bottom">BOTTOM</div>
+        <div class="shelf-left">LEFT</div>
+        <div class="shelf-right">RIGHT</div>
+      </div>
+    </div> -->
+
+    
+
+    <p class="radio-group">
+        <input type="radio" name="rotate-cube-side" value="close" checked/> close <br>
+        <input type="radio" name="rotate-cube-side" value="front" /> front <br>
+        <input type="radio" name="rotate-cube-side" value="back" /> back <br>
+        <input type="radio" name="rotate-cube-side" value="tracks" /> tracks <br>
+        <input type="radio" name="rotate-cube-side" value="open" /> open <br>
+    </p>
+  </body>
+
+   <script src="cassette.js"></script>
+</html>

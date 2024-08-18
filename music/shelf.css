@@ -1,0 +1,37 @@
+.shelfscene {
+  width: 390mm;
+  height: 250mm;
+  border: 1mm solid #CCC;
+  margin: auto;
+  perspective: 200mm;
+}
+
+.shelf {
+  width: 100%;
+  height: 100%;
+  position: relitive;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: rotateX(90deg) translateZ(-200mm);
+}
+
+.shelf-back{
+  width: 390mm;
+  height: 250mm;
+  background: url('./wood.png');
+}
+.shelf-front{
+  background: url('./wood.png');
+}
+.shelf-top, .shelf-bottom{
+  width: 390mm;
+  height: 75mm;
+  top: 87.5mm;
+  background: url('./wood.png');
+}
+.shelf-left, .shelf-right{
+  width: 75mm;
+  height: 250mm;
+  left: 157.5mm;
+  background: url('./wood.png');
+}
