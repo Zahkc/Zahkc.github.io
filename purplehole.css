@@ -190,10 +190,10 @@ body {
 
 @keyframes animate {
     0% {
-        transform: perspective(1000px) rotateY(360deg);
+        transform: perspective(100vh) rotateY(360deg);
     }
     100% {
-        transform: perspective(1000px) rotateY(0deg) ;
+        transform: perspective(100vh) rotateY(0deg) ;
     }
 }
 
