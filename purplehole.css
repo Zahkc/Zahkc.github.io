@@ -52,8 +52,9 @@ body {
   right: 0;
   margin: auto;
   /* outline: 0.25vh solid white; */
+  filter: drop-shadow(0 -4vh 25vh #dd2080);
 
-  z-index:5;
+  z-index:3;
 }
 .blackHoleB {
   width: 20vh;
@@ -69,47 +70,12 @@ body {
   right: 0;
   margin: auto;
   /* outline: 0.25vh solid white; */
+  filter: drop-shadow(0 4vh 25vh #dd2080);
 
   z-index:2;
 }
 
-.bgrA {
-  width: 20.5vh;
-  height: 10vh;
-  background-color:#550c31;
-  background-image: radial-gradient(ellipse at 50% 50%, #000000, #550c31);
-  /* background-image: url(noise.png); */
-  position: absolute;
-  border-top-left-radius: 10vh;
-  border-top-right-radius: 10vh;
-  top:39%;
-  bottom: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  /* outline: 0.25vh solid white; */
-  z-index:4;
-}
-
-.bgrB {
-  width: 20.5vh;
-  height: 10.5vh;
-  background-color:#550c31;
-  background-image: radial-gradient(ellipse at 50% 50%, #000000, #550c31);
-  /* background-image: url(noise.png); */
-  position: absolute;
-  border-bottom-left-radius: 10vh;
-  border-bottom-right-radius: 10vh;
-  top:55%;
-  bottom: 50%;
-  left: 0;
-  right: 0;
-  margin: auto;
-  /* outline: 0.25vh solid white; */
-  z-index:1;
-}
-
-.bgrh {
+.blackHoleR {
   width: 40vh;
   height: 3vh;
   background-color:#550c31;
@@ -132,12 +98,9 @@ body {
   filter: drop-shadow(0 0 25vh #dd2080);
   position: absolute;
   border-radius: 50%/100%;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  z-index:9;
+  top:50%;
+  left: 50%;
+  z-index:2;
 }
 
 .title {
@@ -166,7 +129,6 @@ body {
   background:white;
   clip-path: polygon(20% 40%, 40% 40%, 40% 20%, 60% 20%, 60% 39%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%);
   position: fixed;
-  z-index:90;
 }
 
 .spinring {
@@ -199,7 +161,7 @@ body {
 @keyframes move {
   0% {
     offset-distance: 0%;
-    z-index:90;
+    z-index:6;
   }
   100% {
     offset-distance: 100%;
