@@ -143,7 +143,8 @@ body {
     position: fixed;
     color: white;
     font-size: 5vh;
-    font-family: SpaceRanger;
+    font-family: monospace;
+    /* padding: 1vh 2vh; */
     transform-style: preserve-3d;
     transform-origin: center;
     transform: rotateY(calc(var(--char-index) * var(--deg))) translateZ(30vh) translateY(50vh);
