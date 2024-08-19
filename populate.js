@@ -41,8 +41,8 @@ async function vaccume(fallingCount){
   }
   starPos = 0;
   while (true){
-    xMax = window.innerHeight;
-    yMax = window.innerWidth;
+    yMax = window.innerHeight - (window.innerHeight*0.0075);
+    xMax = window.innerWidth - (window.innerHeight*0.0075);
     flingStar(starPos%fallingCount);
     starPos++;
     await new Promise(r => setTimeout(r, 500));
@@ -52,26 +52,26 @@ async function vaccume(fallingCount){
 function flingStar(starPos) {
   switch(Math.floor(Math.random() *4)) {
     case 0:
-      xStart = (Math.floor(Math.random() * yMax));
+      xStart = Math.floor(Math.random() * xMax );
       yStart = 0;
       xArc = xStart;
-      yArc = xMax + 10;
+      yArc = yMax + 10;
       break;
     case 1:
       xStart = 0;
-      yStart = (Math.floor(Math.random() * xMax));
-      xArc = yMax + 10;
+      yStart = Math.floor(Math.random() * yMax );
+      xArc = xMax + 10;
       yArc = yStart;
       break;
     case 2:
-      xStart = (Math.floor(Math.random() * yMax));
-      yStart = (xMax-(yMax**0.0075));
+      xStart = Math.floor(Math.random() * xMax );
+      yStart = yMax;
       xArc = xStart;
       yArc = - 10;
       break;
     case 3:
-      xStart = (yMax-(yMax*0.0075));
-      yStart = (Math.floor(Math.random() * xMax));
+      xStart = xMax;
+      yStart = Math.floor(Math.random() * yMax );
       xArc = -10;
       yArc = yStart;
   }
@@ -81,8 +81,8 @@ function flingStar(starPos) {
   yStart + " Q " +
   xArc + " " +
   yArc + " " +
-  (yMax / 2) + " " +
-  (xMax / 2) + "'";
+  (xMax / 2) + " " +
+  (yMax / 2) + "'";
 
   document.getElementById("star"+starPos).innerHTML = '<div class="sinkingStar" style="offset-path: path(' + path + '); animation: move '+Math.floor(Math.random()*3500 + 1500)+'ms ease-in-out;"></div>';
 }

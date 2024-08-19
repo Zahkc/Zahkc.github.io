@@ -155,7 +155,7 @@ body {
   color: white;
   font-family: SpaceRangerHalf;
   text-shadow: 0 0 1em #ffffff;
-  font-size: 8vh;
+  font-size: 10vh;
   text-align: center;
 }
 
@@ -165,7 +165,7 @@ body {
   height: 0.75vh;
   background:white;
   clip-path: polygon(20% 40%, 40% 40%, 40% 20%, 60% 20%, 60% 39%, 80% 40%, 80% 60%, 60% 60%, 60% 80%, 40% 80%, 40% 60%, 20% 60%);
-  position:relative;
+  position: fixed;
   z-index:90;
 }
 
@@ -180,7 +180,7 @@ body {
 .spinring .char {
     position: fixed;
     color: white;
-    font-size: 4vh;
+    font-size: 5vh;
     font-family: SpaceRanger;
     transform-style: preserve-3d;
     transform-origin: center;
